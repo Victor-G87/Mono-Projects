@@ -238,7 +238,7 @@ input[type=submit] {
     overflow: hidden;
     z-index: -99;
     content: '';
-    background: transparent url(../img/dot.png) repeat top left;
+    background: transparent url(./img/dot.png) repeat top left;
 }
 
 

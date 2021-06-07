@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="FORM.css">
+
+
+</head>
+<body>
+
+<div class="form__wrapper">
+    <div class="form">
+
+        <div class="form__options">
+            <div class="form__options__login">
+                <div class="options__body">
+                    <p>Already have an account?</p>
+                    <a href="#" class="btn btn-light toggle-slide">Login!</a>
+                </div>
+            </div>
+            <div class="form__options__signup">
+                <p>Don't have an account yet?</p>
+                <a href="#" class="btn btn-light toggle-slide">Sign Up!</a>
+                <small>It's free!</small>
+            </div>
+        </div>
+
+        <div class="form__background"></div>
+
+        <div class="form__body">
+            <form class="login">
+                <h2>Login!</h2>
+                <div class="input-field">
+                    <input type="text" id="log_username" name="log_username">
+                    <label for="log_username">Username</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="log_password" name="log_password">
+                    <label for="log_password">Password</label>
+                </div>
+                <input type="submit" class="btn" value="Login" name="login">
+            </form>
+            <form class="sign-up">
+                <h2>Sign Up!</h2>
+                <div class="input-field">
+                    <input type="email" id="create_email" name="create_email">
+                    <label for="create_email">Email Address</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="create_username" name="create_username">
+                    <label for="create_username">Username</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="create_password" name="create_password">
+                    <label for="create_password">Password</label>
+                </div>
+                <input type="submit" class="btn" value="Create Account" name="signup">
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="FORM.js"></script>
+
+</body>
+</html>

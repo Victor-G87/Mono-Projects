@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="CHAR.css">
+</head>
+<body>
+
+
+
+<div class="main-container">
+    <div class="coverflow-container">
+        <ol class="coverflow-list">
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-1">
+            <li class="coverflow-item">
+                <label for="cover-1">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-2">
+            <li class="coverflow-item">
+                <label for="cover-2">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/9c0075e42d1e099c487488a168db0e41.1000x1000x1.jpg" />
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-3">
+            <li class="coverflow-item">
+                <label for="cover-3">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/3651470.jpg">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-4">
+            <li class="coverflow-item">
+                <label for="cover-4">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/MI0000681618.jpg">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-5">
+            <li class="coverflow-item">
+                <label for="cover-5">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/homepage_large.63d675da.jpg">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-6">
+            <li class="coverflow-item">
+                <label for="cover-6">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/garbagealbum1.jpg">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-7">
+            <li class="coverflow-item">
+                <label for="cover-7">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/long-way-round-2010.png">
+
+                    </div>
+                </label>
+            </li>
+            <!-- Cover item -->
+            <input type="radio" name="cover-item" id="cover-8">
+            <li class="coverflow-item">
+                <label for="cover-8">
+                    <div class="album-cover">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/61b3DwIVKqL.jpg">
+
+                    </div>
+                </label>
+
+        </ol>
+    </div>
+
+</div>
+
+
+<form action="/profile/create" method="post" style="border:1px solid #ccc">
+
+    <div class="main-container">
+        <div class="coverflow-container">
+            <ol class="coverflow-list">
+                <input type="radio" id="Healer" name="role" value="Healer">
+                <li class="coverflow-item">
+                    <label for="Healer">
+                        <div class="album-cover">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+                        </div>
+                    </label>
+                </li>
+
+                <input type="radio" id="Assassin" name="role" value="Assassin">
+                <li class="coverflow-item">
+                    <label for="Assassin">
+                        <div class="album-cover">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+                        </div>
+                    </label>
+                </li>
+
+                <input type="radio" id="Fighter" name="role" value="Fighter">
+                <li class="coverflow-item">
+                    <label for="Fighter">
+                        <div class="album-cover">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+                        </div>
+                    </label>
+                </li>
+
+                <input type="radio" id="Hunter" name="role" value="Hunter">
+                <li class="coverflow-item">
+                    <label for="Hunter">
+                        <div class="album-cover">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+                        </div>
+                    </label>
+                </li>
+
+                <input type="radio" id="Mage" name="role" value="Mage">
+                <li class="coverflow-item">
+                    <label for="Mage">
+                        <div class="album-cover">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3211/51psxBugNkL.jpg">
+                        </div>
+                    </label>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+        </ol>
+
+        <label for="image">Upload image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <label for="phoneNumber"><b>Phone Number</b></label>
+        <input type="tel" id="phoneNumber" placeholder="Enter Phone Number" name="phoneNumber"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <small>Format: 123-456-7890</small>
+        <button type="submit" class="btn">Complete</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

@@ -56,7 +56,7 @@ label:hover {
 }
 /* Now apply 3D transforms (never done this before!) */
 .coverflow-list {
-    -webkit-transform: perspective(200px);
+    -webkit-transform: perspective(300px);
     -webkit-transform-style: preserve-3d;
     -webkit-perspective-origin: 100% 30%;
 }
@@ -83,6 +83,10 @@ input[type="radio"]:checked + .coverflow-item figcaption {
 input[type="radio"]:checked + .coverflow-item ~ .coverflow-item {
     -webkit-transform: rotateY(-45deg);
     background: #515151;
+}
+
+.spacer{
+    height: 350px;
 }
 
 

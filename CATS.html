@@ -1,10 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            background-image: url("/img/NBM.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+            transform: translateZ(0);
+
+        }
+
+        h1 {
+            color: #cccccc;
+        }
+    </style>
+
+
 </head>
 <body>
-$END$
+
+<div class="container">
+    <form action="/ads" method="post">
+        <div class="input-group">
+            <input id="search" type="text" class="form-control" name="search" placeholder="Search by title">
+            <span class="input-group-text"><button type="submit" class="btn btn-primary"><i
+                    class="fa fa-search"></i></button></span>
+        </div>
+    </form>
+
+    <div class="dropdown">
+        <select id="filter" name="filter">
+            <option class="dropdown-content" value="none">Filter By</option>
+            <option class="dropdown-content" name="armor" value="Armor">Armor</option>
+            <option class="dropdown-content" name="weapons" value="Weapons">Weapons</option>
+            <option class="dropdown-content" name="animals" value="Animals">Animals</option>
+            <option class="dropdown-content" name="materials" value="Materials">Materials</option>
+            <option class="dropdown-content" name="consumables" value="Consumables">Consumables</option>
+            <option class="dropdown-content" name="tools" value="Tools">Tools</option>
+            <option class="dropdown-content" name="treasures" value="Treasures">Treasures</option>
+            <option class="dropdown-content" name="misc" value="Misc (anything not in above categories)">Misc</option>
+        </select>
+    </div>
+
+    <h1 id="main-header">Here Are all the ads!</h1>
+    <div class="row">
+        <c:forEach var="ad" items="${ads}">
+            <a href="<c:out value="ads/${ad.id}" />">
+            <div class="col-md-3">
+                <div class="card">
+                    <input type="hidden" name="id" value="${ad.id}">
+                    <img src="<c:out value="${ad.images[0]}" />" class="card-img-top" alt="ad-image">
+                    <div class="card-body">
+                        <h5 class="card-title"><c:out value="${ad.title}" /></h5>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <p><strong>Price: </strong><c:out value="${ad.price}" /></p>
+                    <p><strong>Rarity: </strong><c:out value="${ad.rarity}" /></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <c:forEach var="category" items="${ad.categories}">
+                        <li class="list-group-item"><c:out value="${category}" /></li>
+                    </c:forEach>
+                </ul>
+            </div>
+            </a>
+        </c:forEach>
+    </div>
+
+</div>
+
+
+
 </body>
 </html>

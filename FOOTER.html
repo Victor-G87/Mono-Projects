@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic:700|Raleway&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+
+
+
+    <title>Responsive Footer</title>
+    <link rel="stylesheet" href="FOOTER.css">
+    <script src="FOOTER.js"></script>
+</head>
+<body>
+
+<section>
+    <h1></h1>
+    <div class="dummy-text">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis molestie molestie. Quisque aliquet, diam quis tristique mollis, purus ante ultricies risus, vel rutrum odio nibh nec velit. Phasellus tempor finibus odio at consectetur. Ut tortor urna, convallis et rhoncus eget, malesuada sit amet leo. Nullam eu nunc et ante dapibus lobortis et non lorem. Morbi vel elit ante. Integer congue tempus purus, sit amet sodales orci ultricies vitae. Duis vestibulum purus ac ante ullamcorper, sed congue nisi mollis. Mauris tincidunt interdum ipsum, eget scelerisque est fringilla in. Vestibulum dapibus commodo urna. Aliquam erat volutpat. Duis et quam eget urna faucibus rhoncus sed et enim. Donec ultrices tincidunt arcu in tincidunt. Fusce eget magna ullamcorper, laoreet est sit amet, gravida orci. Fusce vel auctor nibh.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <span class="logo">iTechnology</span>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Solution</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href=""><span>Interprise App Development</span></a></li>
+                <li><a href=""><span>Android App Development</span></a></li>
+                <li><a href=""><span>ios App Development</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Industries</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href=""><span>Healthcare</span></a></li>
+                <li><a href=""><span>Sports</span></a></li>
+                <li><a href=""><span>ECommerce</span></a></li>
+                <li><a href=""><span>Construction</span></a></li>
+                <li><a href=""><span>Club</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Quick Links</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href=""><span>Reviews</span></a></li>
+                <li><a href=""><span>Terms & Condition</span></a></li>
+                <li><a href=""><span>Disclaimer</span></a></li>
+                <li><a href=""><span>Site Map</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3" id="newsletter">
+            <span>Stay Connected</span>
+            <form id="subscribe">
+                <input type="email" id="subscriber-email" placeholder="Enter Email Address"/>
+                <input type="submit" value="Subscribe" id="btn-scribe"/>
+            </form>
+
+            <div class="social-links social-2">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-tumblr"></i></a>
+                <a href=""><i class="fab fa-reddit-alien"></i></a>
+            </div>
+
+            <div id="address">
+                <span>Office Location</span>
+                <ul>
+                    <li>
+                        <i class="far fa-building"></i>
+                        <div>Los Angeles<br/>
+                            Office 9B, Sky High Tower, New A Ring Road, Los Angeles</div>
+                    </li>
+                    <li>
+                        <i class="far fa-building"></i>
+                        <div>Delhi<br/>
+                            Office 150B, Behind Sana Gate Char Bhuja Tower, Station Road, Delhi</div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="social-links social-1 col-6">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-tumblr"></i></a>
+            <a href=""><i class="fab fa-reddit-alien"></i></a>
+        </div>
+    </div>
+    <div id="copyright">
+        &copy; All Rights Reserved 2019-2020
+    </div>
+    <div id="owner">
+           <span>
+               Designed by <a href=""></a>
+           </span>
+    </div>
+</footer>
+
+<script>
+
+    function footerToggle(footerBtn) {
+        $(footerBtn).toggleClass("btnActive");
+        $(footerBtn).next().toggleClass("active");
+    }
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+</html>

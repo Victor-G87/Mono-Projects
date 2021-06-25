@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="CHAR.css">
+<!--    <link rel="stylesheet" href="CHAR.css">-->
 
 </head>
 <body>
@@ -103,78 +103,106 @@
 <!--    </div>-->
 
 <!--</div>-->
-<h1>    CHARACTER SELECT</h1>
+<!--<h1>    CHARACTER SELECT </h1>-->
 
-<form action="/profile/create" method="post" style="border:0px solid #ccc">
+<!--<form action="/profile/create" method="post" style="border:0px solid #ccc">-->
 
-    <div class="spacerTop"></div>
+<!--    <div class="spacerTop"></div>-->
 
-    <div class="main-container">
-        <div class="coverflow-container">
-            <ol class="coverflow-list">
-                <input type="radio" id="Healer" name="role" value="Healer">
-                <li class="coverflow-item">
-                    <label for="Healer">
-                        <div class="album-cover">
-                            <img src="img/HEALER.png" height="50%" width="50%"/></div>
-                    </label>
-                </li>
+<!--    <div class="main-container">-->
+<!--        <div class="coverflow-container">-->
+<!--            <ol class="coverflow-list">-->
+<!--                <input type="radio" id="Healer" name="role" value="Healer">-->
+<!--                <li class="coverflow-item">-->
+<!--                    <label for="Healer">-->
+<!--                        <div class="album-cover">-->
+<!--                            <img src="img/HEALER.png" height="50%" width="50%"/></div>-->
+<!--                    </label>-->
+<!--                </li>-->
 
-                <input type="radio" id="Assassin" name="role" value="Assassin">
-                <li class="coverflow-item">
-                    <label for="Assassin">
-                        <div class="album-cover">
-                            <img src="img/ASSASIN.png" height="50%" width="50%"/>
+<!--                <input type="radio" id="Assassin" name="role" value="Assassin">-->
+<!--                <li class="coverflow-item">-->
+<!--                    <label for="Assassin">-->
+<!--                        <div class="album-cover">-->
+<!--                            <img src="img/ASSASIN.png" height="50%" width="50%"/>-->
+<!--                        </div>-->
+<!--                    </label>-->
+<!--                </li>-->
+
+<!--                <input type="radio" id="Fighter" name="role" value="Fighter">-->
+<!--                <li class="coverflow-item">-->
+<!--                    <label for="Fighter">-->
+<!--                        <div class="album-cover">-->
+<!--                            <img src="img/FIGHTER.png" height="50%" width="50%"/>-->
+<!--                        </div>-->
+<!--                    </label>-->
+<!--                </li>-->
+
+<!--                <input type="radio" id="Hunter" name="role" value="Hunter">-->
+<!--                <li class="coverflow-item">-->
+<!--                    <label for="Hunter">-->
+<!--                        <div class="album-cover">-->
+<!--                            <img src="img/HUNTER.png" height="50%" width="50%"/>-->
+<!--                        </div>-->
+<!--                    </label>-->
+<!--                </li>-->
+
+<!--                <input type="radio" id="Mage" name="role" value="Mage">-->
+<!--                <li class="coverflow-item">-->
+<!--                    <label for="Mage">-->
+<!--                        <div class="album-cover">-->
+<!--                            <img src="img/MAGE.png" height="50%" width="50%"/>-->
+<!--                        </div>-->
+<!--                    </label>-->
+<!--                </li>-->
+<!--            </ol>-->
+
+
+<!--            <div class="spacer"></div>-->
+
+<!--        <label for="image">Upload image:</label>-->
+<!--        <input type="file" id="image" name="image" accept="image/*">-->
+
+<!--        <label for="phoneNumber"><b>Phone Number</b></label>-->
+<!--        <input type="tel" id="phoneNumber" placeholder="Enter Phone Number" name="phoneNumber"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>-->
+<!--        <small>Format: 123-456-7890</small>-->
+<!--        <button type="submit" class="btn">Complete</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</form>-->
+
+
+        <div class="col">
+            <c:forEach var="ad" items="${ads}">
+                <a type="submit" href="<c:out value="ad?id=${ad.id}" />" role="button">
+                <div class="row-md-5">
+                    <div class="card">
+                        <input type="hidden" name="id" value="${ad.id}">
+                        <img src="<c:out value="${ad.images[0]}" />" class="card-img-top" alt="ad-image">
+                        <div class="card-body">
+                            <h5 class="card-title"><c:out value="${ad.title}"/></h5>
                         </div>
-                    </label>
-                </li>
 
-                <input type="radio" id="Fighter" name="role" value="Fighter">
-                <li class="coverflow-item">
-                    <label for="Fighter">
-                        <div class="album-cover">
-                            <img src="img/FIGHTER.png" height="50%" width="50%"/>
+                        <div class="card-text">
+                            <p><strong>Price: </strong><c:out value="${ad.price}"/></p>
+                            <p><strong>Rarity: </strong><c:out value="${ad.rarity}"/></p>
                         </div>
-                    </label>
-                </li>
+                        <ul class="list-group list-group">
+                            <c:forEach var="category" items="${ad.categories}">
+                                <li class="list-group-item"><c:out value="${category}"/></li>
+                            </c:forEach>
+                        </ul>
+                    </div>
+                </div>
+                </a>
 
-                <input type="radio" id="Hunter" name="role" value="Hunter">
-                <li class="coverflow-item">
-                    <label for="Hunter">
-                        <div class="album-cover">
-                            <img src="img/HUNTER.png" height="50%" width="50%"/>
-                        </div>
-                    </label>
-                </li>
-
-                <input type="radio" id="Mage" name="role" value="Mage">
-                <li class="coverflow-item">
-                    <label for="Mage">
-                        <div class="album-cover">
-                            <img src="img/MAGE.png" height="50%" width="50%"/>
-                        </div>
-                    </label>
-                </li>
-            </ol>
-
-
-            <div class="spacer"></div>
-
-        <label for="image">Upload image:</label>
-        <input type="file" id="image" name="image" accept="image/*">
-
-        <label for="phoneNumber"><b>Phone Number</b></label>
-        <input type="tel" id="phoneNumber" placeholder="Enter Phone Number" name="phoneNumber"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        <small>Format: 123-456-7890</small>
-        <button type="submit" class="btn">Complete</button>
+            </c:forEach>
         </div>
     </div>
-</form>
+</div>
 
 
-<canvas id="canv" width="32" height="32">
 
-</canvas>
 
 
 <script src="CHAR.js"></script>

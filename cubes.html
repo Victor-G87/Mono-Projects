@@ -3,6 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        /* Right triangle, right side slightly down*/
+        .tri-right.border.right-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -40px;
+            top: 30px;
+            bottom: auto;
+            border: 20px solid;
+            border-color: #666 transparent transparent #666;
+        }
+        .tri-right.right-in:after{
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -20px;
+            top: 38px;
+            bottom: auto;
+            border: 12px solid;
+            border-color: lightyellow transparent transparent lightyellow;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,27 +51,13 @@
     <use xlink:href="#cube" x="121" y="136"/>
     <use class="m-left" xlink:href="#cube" x="79" y="136"/>
     <use xlink:href="#cube" x="163" y="136"/>
-    <use xlink:href="#cube" x="142" y="148"/>
-    <use xlink:href="#cube" x="100" y="148"/>
-    <use xlink:href="#cube" x="121" y="160"/>
-    <use xlink:href="#cube" x="121" y="88"/>
-    <use xlink:href="#cube" x="100" y="100"/>
+
     <use xlink:href="#cube" x="142" y="100"/>
     <use xlink:href="#cube" x="121" y="112"/>
     <use xlink:href="#cube" x="79" y="112"/>
     <use xlink:href="#cube" x="163" y="112"/>
     <line opacity=".5" x1="165" x2="185" y1="155" y2="155" fill="none" stroke-width="1" stroke-linecap="round" stroke="var(--lightColor)" stroke-dasharray="2.5" />
-    <use class="m-right" xlink:href="#cube" x="142" y="124"/>
-    <use xlink:href="#cube" x="100" y="124"/>
-    <use xlink:href="#cube" x="121" y="136"/>
-    <use xlink:href="#cube" x="121" y="64"/>
-    <use class="m-up" xlink:href="#cube" x="100" y="76"/>
-    <use xlink:href="#cube" x="142" y="76"/>
-    <use xlink:href="#cube" x="121" y="88"/>
-    <use xlink:href="#cube" x="79" y="88"/>
-    <use class="m-right" xlink:href="#cube" x="163" y="88"/>
-    <use xlink:href="#cube" x="142" y="100"/>
-    <use xlink:href="#cube" x="100" y="100"/>
+
     <use xlink:href="#cube" x="121" y="112"/>
 </svg>
 <p>hover over me</p>
@@ -86,6 +100,12 @@
     <use xlink:href="#cube" x="121" y="48"/>
 </svg>
 <p>hover over me</p>
+
+<div class="talk-bubble tri-right round border right-top">
+    <div class="talktext">
+        <p>And finally on the right flush at the top. Uses .round .border and .right-top</p>
+    </div>
+</div>
 
 </body>
 </html>
